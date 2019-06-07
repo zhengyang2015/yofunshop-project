@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>name</td>
+        <td>age</td>
+        <td>address</td>
+        <td>qq</td>
+        <td>wechat</td>
+        <td>telephone</td>
+        <td>email</td>
+        <td>sex</td>
+        <td>datebirth</td>
+        <td>account</td>
+        <td>action</td>
+    </tr>
+    <tr th:each = "user : ${users}">
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+        <td th:text="${user.address}"></td>
+        <td th:text="${user.qq}"></td>
+        <td th:text="${user.wechat}"></td>
+        <td th:text="${user.telephone}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.sex}"></td>
+        <td th:text="${user.datebirth}"></td>
+        <td th:text="${user.account}"></td>
+        <td>
+            <a href="#" th:href="@{/findByUserId(id=${user.id})}">LookUp</a>
+            <a href="#" th:href="@{/toUserUpdate(id=${user.id})}">Update</a>
+            <a href="#" th:href="@{/deleteUserById(id=${user.id})}">Delete</a>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>
