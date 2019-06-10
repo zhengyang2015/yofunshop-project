@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+Parent: <span th:text="${productType.productTypeName}"></span>
+<form action="insertProducttype" method="post">
+    <input th:value="${productType.id}" type="hidden" name="parentid"/>
+    Name：<input type="text" name="productTypeName"/>
+    Description：<input type="text" name="productTypeDescription"/>
+    Level：<input type="text" name="typeLevel"/>
+    <input type="submit" th:value="submit"/>
+</form>
+</body>
+</html>
