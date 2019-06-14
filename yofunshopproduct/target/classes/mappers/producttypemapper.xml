@@ -9,11 +9,40 @@
         <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
             SELECT LAST_INSERT_ID()
         </selectKey>
-        insert into user(productTypeName,productTypeDescription,typeLevel,parentId) value(#{productTypeName},#{productTypeDescription},#{typeLevel},#{parentId})
+        insert into producttype(typename,typedescription,typelevel,parentid) value(#{typeName},#{typeDescription},#{typeLevel},#{parentId})
     </insert>
 
     <select id="findProductTypeById" parameterType="int" resultType="com.yofun.model.ProductType">
         select * from producttype where id = #{value}
     </select>
+
+    <update id="updateProductType" parameterType="com.yofun.model.ProductType">
+        update producttype set typename = #{typeName}, typedescription = #{typeDescription} where id=#{id}
+    </update>
+
+    <select id="queryProductTypeByVo" parameterType="com.yofun.vo.ProductTypeVo" resultType="com.yofun.model.ProductType">
+        select * from producttype
+        <where>
+            <include refid="customsql"></include>
+        </where>
+    </select>
+
+    <sql id="customsql">
+        <if test="customProductType != null">
+            <if test="customProductType.typeName != null and customProductType.typeName != ''">
+                and typeName = "${customProductType.typeName}"
+            </if>
+            <if test="customProductType.typeDescription != null and customProductType.typeDescription != ''">
+                and typeDescription = "${customProductType.typeDescription}"
+            </if>
+            <if test="customProductType.typeLevel != null and customProductType.typeLevel != ''">
+                and typeLevel = "${customProductType.typeLevel}"
+            </if>
+        </if>
+    </sql>
+
+    <delete id="deleteProductTypeById" parameterType="int">
+        delete from producttype where id = #{value}
+    </delete>
 
 </mapper>

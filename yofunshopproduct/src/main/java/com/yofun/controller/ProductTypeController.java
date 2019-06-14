@@ -2,11 +2,14 @@ package com.yofun.controller;
 
 import com.yofun.model.ProductType;
 import com.yofun.service.ProductTypeService;
+import com.yofun.vo.ProductTypeVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
 
 @Controller
 public class ProductTypeController {
@@ -20,14 +23,52 @@ public class ProductTypeController {
         productTypeService.insertProductType(productType);
     }
 
-    @RequestMapping(value = "/findProductTypeById", method = RequestMethod.GET)
-    public String findProductTypeById(int id, Model model) {
+    @RequestMapping(value = "/toAddProductTypeById", method = RequestMethod.GET)
+    public String toAddProductTypeById(int id, Model model) {
         ProductType productType = productTypeService.findProductTypeById(id);
         if(productType == null) {
             productType = new ProductType();
-            productType.setParentId(-1);
+            productType.setId(-1);
         }
         model.addAttribute("productType", productType);
         return "producttypeadd";
+    }
+
+    @RequestMapping(value = "/findProductTypeById", method = RequestMethod.GET)
+    public String findProductTypeById(int id, Model model) {
+        ProductType productType = productTypeService.findProductTypeById(id);
+        ProductType parentProductType = productTypeService.findProductTypeById(productType.getId());
+        if(parentProductType == null) {
+            parentProductType = new ProductType();
+            parentProductType.setTypeName("");
+        }
+        model.addAttribute("productType", productType);
+        model.addAttribute("parentProductType", parentProductType);
+        return "producttypeview";
+    }
+
+    @RequestMapping(value = "/toUpdateProductTypeById", method = RequestMethod.GET)
+    public String toUpdateProductTypeById(int id, Model model) {
+        ProductType productType = productTypeService.findProductTypeById(id);
+        model.addAttribute("productType", productType);
+        return "producttypeupdate";
+    }
+
+    @RequestMapping(value = "/updateProductTypeById", method = RequestMethod.POST)
+    public void updateProductTypeById(ProductType productType, Model model) {
+        productTypeService.updateProductType(productType);
+    }
+
+    @RequestMapping(value = "/queryProductTypeByVo", method = RequestMethod.GET)
+    public String queryProductTypeByVo(Model model) {
+        ProductTypeVo productTypeVo = new ProductTypeVo();
+        List<ProductType> productTypes = productTypeService.queryProductTypeByVo(productTypeVo);
+        model.addAttribute("productTypes", productTypes);
+        return "producttypes";
+    }
+
+    @RequestMapping(value = "/deleteProductTypeById", method = RequestMethod.GET)
+    public void deleteProductTypeById(int id) {
+        productTypeService.deleteProductTypeById(id);
     }
 }

@@ -9,8 +9,8 @@ import lombok.*;
 @AllArgsConstructor
 public class ProductType {
     private int id;
-    private String productTypeName;
-    private String productTypeDescription;
+    private String typeName;
+    private String typeDescription;
     private String typeLevel;
     private int parentId;
 }

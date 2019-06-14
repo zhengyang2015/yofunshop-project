@@ -3,11 +3,11 @@
     <title></title>
 </head>
 <body>
-Parent: <span th:text="${productType.productTypeName}"></span>
+Parent: <span th:text="${productType.typeName}"></span>
 <form action="insertProducttype" method="post">
-    <input th:value="${productType.id}" type="hidden" name="parentid"/>
-    Name：<input type="text" name="productTypeName"/>
-    Description：<input type="text" name="productTypeDescription"/>
+    <input th:value="${productType.id}" type="hidden" name="parentId"/>
+    Name：<input type="text" name="typeName"/>
+    Description：<input type="text" name="typeDescription"/>
     Level：<input type="text" name="typeLevel"/>
     <input type="submit" th:value="submit"/>
 </form>
