@@ -14,4 +14,12 @@ public class MerchantDao {
     public void insertMerchant(Merchant merchant) {
         merchantMapper.insertMerchant(merchant);
     }
+
+    public Merchant findMerchantById(int id) {
+        return merchantMapper.findMerchantById(id);
+    }
+
+    public void updateMerchantById(Merchant merchant) {
+        merchantMapper.updateMerchantById(merchant);
+    }
 }

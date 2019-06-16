@@ -15,4 +15,12 @@ public class MerchantService {
         merchant.setAuditStatus(1);
         merchantDao.insertMerchant(merchant);
     }
+
+    public Merchant findMerchantById(int id) {
+        return merchantDao.findMerchantById(id);
+    }
+
+    public void updateMerchantById(Merchant merchant) {
+        merchantDao.updateMerchantById(merchant);
+    }
 }
