@@ -23,4 +23,11 @@ public class MerchantService {
     public void updateMerchantById(Merchant merchant) {
         merchantDao.updateMerchantById(merchant);
     }
+
+    public void updateMerchantAuditStatus(int id, int status) {
+        Merchant merchant = new Merchant();
+        merchant.setId(id);
+        merchant.setAuditStatus(status);
+        merchantDao.updateMerchantAuditStatus(merchant);
+    }
 }

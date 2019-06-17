@@ -17,7 +17,11 @@
     </select>
 
     <update id="updateMerchantById" parameterType="com.yofun.model.Merchant">
-        update merchant set merchantname = #{merchantName}, merchantshopname = #{merchantShopName}, merchantpassword = #{merchantPassword}, merchantscope = #{merchantScope} where id=#{id}
+        update merchant set merchantshopname = #{merchantShopName}, merchantpassword = #{merchantPassword}, merchantscope = #{merchantScope} where id=#{id}
+    </update>
+
+    <update id="updateMerchantAuditStatus" parameterType="com.yofun.model.Merchant">
+        update merchant set auditstatus = #{auditStatus} where id=#{id}
     </update>
 
     <!--<select id="queryProductTypeByVo" parameterType="com.yofun.vo.ProductTypeVo" resultType="com.yofun.model.ProductType">-->

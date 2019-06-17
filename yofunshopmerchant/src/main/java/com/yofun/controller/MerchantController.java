@@ -48,4 +48,19 @@ public class MerchantController {
         model.addAttribute("merchant", merchant);
         return "merchantupdate";
     }
+
+    @RequestMapping(value = "/updateMerchantAuditStatus", method = RequestMethod.POST)
+    public void updateMerchantAuditStatus(int id, int status) {
+        merchantService.updateMerchantAuditStatus(id, status);
+    }
+
+    @RequestMapping(value = "/toUpdateMerchantAuditStatus", method = RequestMethod.GET)
+    public String toUpdateMerchantAuditStatus(int id, Model model) {
+        Merchant merchant = merchantService.findMerchantById(id);
+        if(merchant == null) {
+            throw new RuntimeException("No Merchant find by id : " + id);
+        }
+        model.addAttribute("merchant", merchant);
+        return "merchantupdateauditstatus";
+    }
 }
