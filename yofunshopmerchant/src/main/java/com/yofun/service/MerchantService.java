@@ -13,6 +13,7 @@ public class MerchantService {
 
     public void insertMerchant(Merchant merchant) {
         merchant.setAuditStatus(1);
+        merchant.setRemoveStatus(1);
         merchantDao.insertMerchant(merchant);
     }
 
@@ -21,6 +22,7 @@ public class MerchantService {
     }
 
     public void updateMerchantById(Merchant merchant) {
+        merchant.setRemoveStatus(1);
         merchantDao.updateMerchantById(merchant);
     }
 
@@ -29,5 +31,12 @@ public class MerchantService {
         merchant.setId(id);
         merchant.setAuditStatus(status);
         merchantDao.updateMerchantAuditStatus(merchant);
+    }
+
+    public void updateMerchantRemoveStatus(int id, int status) {
+        Merchant merchant = new Merchant();
+        merchant.setId(id);
+        merchant.setRemoveStatus(status);
+        merchantDao.updateMerchantRemoveStatus(merchant);
     }
 }

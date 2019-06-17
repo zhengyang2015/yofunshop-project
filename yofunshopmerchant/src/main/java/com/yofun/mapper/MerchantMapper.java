@@ -7,4 +7,5 @@ public interface MerchantMapper {
     Merchant findMerchantById(int id);
     void updateMerchantById(Merchant merchant);
     void updateMerchantAuditStatus(Merchant merchant);
+    void updateMerchantRemoveStatus(Merchant merchant);
 }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form action="updateMerchantRemoveStatus" method="post">
+    <input type="hidden" name="id" th:value="${merchant.id}"/>
+    MerchantName：<span th:text="${merchant.merchantName}"/><br/>
+    MerchantShopName：<span th:text="${merchant.merchantShopName}"/><br/>
+    MerchantAccount：<span th:text="${merchant.merchantAccount}"/><br/>
+    MerchantScope：<span th:text="${merchant.merchantScope}"/><br/>
+    AuditStatus: <span th:text="${merchant.auditStatus}"/><br/>
+    RemoveStatus: <input type="radio" name="status" th:value="1"/> normal <input type="radio" name="status" th:value="2"/> removed
+    <input type="submit" value="Submit"/><br/>
+</form>
+</body>
+</html>

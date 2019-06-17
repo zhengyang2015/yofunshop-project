@@ -26,4 +26,8 @@ public class MerchantDao {
     public void updateMerchantAuditStatus(Merchant merchant) {
         merchantMapper.updateMerchantAuditStatus(merchant);
     }
+
+    public void updateMerchantRemoveStatus(Merchant merchant) {
+        merchantMapper.updateMerchantRemoveStatus(merchant);
+    }
 }

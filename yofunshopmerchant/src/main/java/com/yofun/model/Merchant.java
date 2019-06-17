@@ -15,4 +15,5 @@ public class Merchant {
     private String merchantPassword;
     private String merchantScope;
     private int auditStatus;
+    private int removeStatus;
 }

@@ -63,4 +63,20 @@ public class MerchantController {
         model.addAttribute("merchant", merchant);
         return "merchantupdateauditstatus";
     }
+
+    @RequestMapping(value = "/updateMerchantRemoveStatus", method = RequestMethod.POST)
+    public void updateMerchantRemoveStatus(int id, int status) {
+
+        merchantService.updateMerchantRemoveStatus(id, status);
+    }
+
+    @RequestMapping(value = "/toUpdateMerchantRemoveStatus", method = RequestMethod.GET)
+    public String toUpdateMerchantRemoveStatus(int id, Model model) {
+        Merchant merchant = merchantService.findMerchantById(id);
+        if(merchant == null) {
+            throw new RuntimeException("No Merchant find by id : " + id);
+        }
+        model.addAttribute("merchant", merchant);
+        return "merchantupdateremovestatus";
+    }
 }
