@@ -12,6 +12,7 @@
         <module>yofunshopuser</module>
         <module>yofunshopmerchant</module>
         <module>yofunshopproducttype</module>
+        <module>yofunshopmerchandise</module>
     </modules>
 
 
