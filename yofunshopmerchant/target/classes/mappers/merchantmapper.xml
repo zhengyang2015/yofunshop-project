@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yofun.mapper.MerchantMapper">
+
+    <insert id="insertMerchant" parameterType="com.yofun.model.Merchant">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into merchant(merchantname,merchantshopname,merchantaccount,merchantpassword,merchantscope,auditstatus, removestatus) value(#{merchantName},#{merchantShopName},#{merchantAccount},#{merchantPassword},#{merchantScope},#{auditStatus},#{removeStatus})
+    </insert>
+
+    <select id="findMerchantById" parameterType="int" resultType="com.yofun.model.Merchant">
+        select * from merchant where id = #{value}
+    </select>
+
+    <update id="updateMerchantById" parameterType="com.yofun.model.Merchant">
+        update merchant set merchantshopname = #{merchantShopName}, merchantpassword = #{merchantPassword}, merchantscope = #{merchantScope} where id=#{id}
+    </update>
+
+    <update id="updateMerchantAuditStatus" parameterType="com.yofun.model.Merchant">
+        update merchant set auditstatus = #{auditStatus} where id=#{id}
+    </update>
+
+    <update id="updateMerchantRemoveStatus" parameterType="com.yofun.model.Merchant">
+        update merchant set removestatus = #{removeStatus} where id=#{id}
+    </update>
+
+    <!--<select id="queryProductTypeByVo" parameterType="com.yofun.vo.ProductTypeVo" resultType="com.yofun.model.ProductType">-->
+        <!--select * from producttype-->
+        <!--<where>-->
+            <!--<include refid="customsql"></include>-->
+        <!--</where>-->
+    <!--</select>-->
+
+    <!--<sql id="customsql">-->
+        <!--<if test="customProductType != null">-->
+            <!--<if test="customProductType.typeName != null and customProductType.typeName != ''">-->
+                <!--and typeName = "${customProductType.typeName}"-->
+            <!--</if>-->
+            <!--<if test="customProductType.typeDescription != null and customProductType.typeDescription != ''">-->
+                <!--and typeDescription = "${customProductType.typeDescription}"-->
+            <!--</if>-->
+            <!--<if test="customProductType.typeLevel != null and customProductType.typeLevel != ''">-->
+                <!--and typeLevel = "${customProductType.typeLevel}"-->
+            <!--</if>-->
+        <!--</if>-->
+    <!--</sql>-->
+
+    <!--<delete id="deleteProductTypeById" parameterType="int">-->
+        <!--delete from producttype where id = #{value}-->
+    <!--</delete>-->
+
+</mapper>

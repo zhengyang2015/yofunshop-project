@@ -10,8 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>yofunshopuser</module>
-        <module>yofunshopproduct</module>
         <module>yofunshopmerchant</module>
+        <module>yofunshopproducttype</module>
     </modules>
 
 

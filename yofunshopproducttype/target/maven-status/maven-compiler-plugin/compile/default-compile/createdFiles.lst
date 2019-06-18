@@ -1,0 +1,9 @@
+com/yofun/mapper/ProductTypeMapper.class
+com/yofun/Application.class
+com/yofun/vo/CustomProductType.class
+com/yofun/model/ProductType.class
+com/yofun/model/ProductType$ProductTypeBuilder.class
+com/yofun/service/ProductTypeService.class
+com/yofun/dao/ProductTypeDao.class
+com/yofun/vo/ProductTypeVo.class
+com/yofun/controller/ProductTypeController.class
