@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="yofunshopmerchandise" />
         <module name="yofunshopmerchant" />
+        <module name="yofunshopproductdetails" />
         <module name="yofunshopproducttype" />
         <module name="yofunshopuser" />
       </profile>

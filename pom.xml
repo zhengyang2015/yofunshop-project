@@ -13,6 +13,7 @@
         <module>yofunshopmerchant</module>
         <module>yofunshopproducttype</module>
         <module>yofunshopmerchandise</module>
+        <module>yofunshopproductdetails</module>
     </modules>
 
 
