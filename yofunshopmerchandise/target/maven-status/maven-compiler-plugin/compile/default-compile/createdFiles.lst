@@ -1,3 +1,7 @@
+com/yofun/controller/ProductController.class
 com/yofun/model/Product.class
+com/yofun/dao/ProductDao.class
+com/yofun/mapper/ProductMapper.class
 com/yofun/Application.class
+com/yofun/service/ProductService.class
 com/yofun/model/Product$ProductBuilder.class
