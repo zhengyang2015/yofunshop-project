@@ -17,7 +17,39 @@
     </update>
 
     <select id="findProductById" parameterType="int" resultType="com.yofun.model.Product">
-        select * from merchant where id = #{value}
+        select * from product where id = #{value}
     </select>
+
+    <update id="updateProduct" parameterType="com.yofun.model.Product">
+        update product set producttypeid = #{productTypeId}, producttitle = #{productTitle}, productprice = #{productPrice}, stocknumber = #{stockNumber}, productimageurl = #{productImageUrl} where id=#{id}
+    </update>
+
+    <delete id="deleteProductById" parameterType="int">
+        delete from product where id = #{value}
+    </delete>
+
+    <select id="queryProductByVo" parameterType="com.yofun.vo.ProductVo" resultType="com.yofun.model.Product">
+        select * from product
+        <where>
+            <include refid="customsql"></include>
+        </where>
+    </select>
+
+    <sql id="customsql">
+        <if test="customProduct != null">
+            <if test="customProduct.productTypeId != null and customProduct.productTypeId != ''">
+                and productTypeId = "${customProduct.productTypeId}"
+            </if>
+            <if test="customProduct.productTitle != null and customProduct.productTitle != ''">
+                and productTitle = "${customProduct.productTitle}"
+            </if>
+            <if test="customProduct.productPrice != null and customProduct.productPrice != ''">
+                and productPrice = "${customProduct.productPrice}"
+            </if>
+            <if test="customProduct.merchantId != null and customProduct.merchantId != ''">
+                and merchantId = "${customProduct.merchantId}"
+            </if>
+        </if>
+    </sql>
 
 </mapper>

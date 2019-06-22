@@ -2,6 +2,7 @@ package com.yofun.controller;
 
 import com.yofun.model.Product;
 import com.yofun.service.ProductService;
+import com.yofun.vo.ProductVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Controller
 public class ProductController {
@@ -41,5 +43,38 @@ public class ProductController {
         }
         model.addAttribute("product", product);
         return "productaudit";
+    }
+
+    @RequestMapping(value = "/queryProductByVo", method = RequestMethod.GET)
+    public String queryProductByVo(Model model) {
+        ProductVo productVo = new ProductVo();
+        List<Product> products = productService.queryProductByVo(productVo);
+        model.addAttribute("products", products);
+        return "products";
+    }
+
+    @RequestMapping(value = "/findProductById", method = RequestMethod.GET)
+    public String findProductById(int id, Model model) {
+        Product product = productService.findProductById(id);
+        model.addAttribute("product", product);
+        return "productview";
+    }
+
+    @RequestMapping(value = "/toUpdateProduct", method = RequestMethod.GET)
+    public String toUpdateProduct(int id, Model model) {
+        Product product = productService.findProductById(id);
+        model.addAttribute("product", product);
+        return "productupdate";
+    }
+
+    @RequestMapping(value = "/updateProduct", method = RequestMethod.POST)
+    public void updateProduct(Product product, Model model) {
+        productService.updateProduct(product);
+    }
+
+    @RequestMapping(value = "/deleteProductById", method = RequestMethod.GET)
+    public String deleteProductById(int id) {
+        productService.deleteProductById(id);
+        return "products";
     }
 }
