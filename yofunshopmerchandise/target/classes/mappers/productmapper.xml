@@ -12,4 +12,12 @@
         insert into product(producttypeid, producttitle, productprice, merchantid, createdat, auditstatus, stocknumber, sellnumber, productimageurl) value(#{productTypeId}, #{productTitle}, #{productPrice}, #{merchantId}, #{createdAt}, #{auditStatus}, #{stockNumber}, #{sellNumber}, #{productImageUrl})
     </insert>
 
+    <update id="auditProduct" parameterType="com.yofun.model.Product">
+        update product set auditstatus = #{auditStatus}, auditat = #{auditAt} where id=#{id}
+    </update>
+
+    <select id="findProductById" parameterType="int" resultType="com.yofun.model.Product">
+        select * from merchant where id = #{value}
+    </select>
+
 </mapper>

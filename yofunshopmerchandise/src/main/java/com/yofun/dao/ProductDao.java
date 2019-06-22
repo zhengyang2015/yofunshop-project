@@ -15,4 +15,12 @@ public class ProductDao {
         productMapper.insertProduct(product);
     }
 
+    public void auditProduct(Product product) {
+        productMapper.auditProduct(product);
+    }
+
+    public Product findProductById(int id) {
+        return productMapper.findProductById(id);
+    }
+
 }

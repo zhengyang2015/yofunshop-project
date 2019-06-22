@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="auditProduct" method="post">
+    <input type="hidden" name="id" th:value="${product.id}"/>
+    ProductTypeId: <span th:text="ProductTypeId"/><br/>
+    ProductTitle: <span th:text="productTitle"/><br/>
+    ProductPrice: <span th:text="productPrice"/><br/>
+    MerchantId: <span th:text="merchantId"/><br/>
+    StockNumbe: <span th:text="stockNumber"/><br/>
+    productImageUrl: <span th:text="productImageUrl"/><br/>
+    auditStatus: <input type="radio" name="auditStatus" th:value="1"/> success <input type="radio" name="auditStatus" th:value="2"/> failed
+    <input type="submit" value="Submit"/><br/>
+</form>
+</body>
+</html>
