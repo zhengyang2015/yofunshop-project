@@ -26,6 +26,8 @@
             <a href="#" th:href="@{/findProductById(id=${product.id})}">LookUp</a>
             <a href="#" th:href="@{/toUpdateProduct(id=${product.id})}">Update</a>
             <a href="#" th:href="@{/deleteProductById(id=${product.id})}">Delete</a>
+            <a href="#" th:href="@{/updateProductStatus(id=${product.id}, productStatus=0)}">Add</a>
+            <a href="#" th:href="@{/updateProductStatus(id=${product.id}, productStatus=1)}">Remove</a>
         </td>
 
     </tr>

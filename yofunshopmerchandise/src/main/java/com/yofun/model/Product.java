@@ -21,4 +21,5 @@ public class Product {
     private int stockNumber;
     private int sellNumber;
     private String productImageUrl;
+    private int productStatus;
 }

@@ -9,7 +9,7 @@
         <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
             SELECT LAST_INSERT_ID()
         </selectKey>
-        insert into product(producttypeid, producttitle, productprice, merchantid, createdat, auditstatus, stocknumber, sellnumber, productimageurl) value(#{productTypeId}, #{productTitle}, #{productPrice}, #{merchantId}, #{createdAt}, #{auditStatus}, #{stockNumber}, #{sellNumber}, #{productImageUrl})
+        insert into product(producttypeid, producttitle, productprice, merchantid, createdat, auditstatus, stocknumber, sellnumber, productimageurl, productstatus) value(#{productTypeId}, #{productTitle}, #{productPrice}, #{merchantId}, #{createdAt}, #{auditStatus}, #{stockNumber}, #{sellNumber}, #{productImageUrl}, #{productStatus})
     </insert>
 
     <update id="auditProduct" parameterType="com.yofun.model.Product">
@@ -51,5 +51,9 @@
             </if>
         </if>
     </sql>
+
+    <update id="updateProductStatus" parameterType="com.yofun.model.Product">
+        update product set productstatus = #{productStatus} where id=#{id}
+    </update>
 
 </mapper>

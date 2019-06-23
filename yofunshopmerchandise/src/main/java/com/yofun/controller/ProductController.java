@@ -22,6 +22,7 @@ public class ProductController {
     public void insertProduct(Product product) {
         product.setCreatedAt(LocalDateTime.now());
         product.setSellNumber(0);
+        product.setProductStatus(0);
         productService.insertProduct(product);
     }
 
@@ -76,5 +77,10 @@ public class ProductController {
     public String deleteProductById(int id) {
         productService.deleteProductById(id);
         return "products";
+    }
+
+    @RequestMapping(value = "/updateProductStatus", method = RequestMethod.GET)
+    public void updateProductStatus(int id, int productStatus) {
+        productService.updateProductStatus(id, productStatus);
     }
 }

@@ -42,4 +42,11 @@ public class ProductService {
     public List<Product> queryProductByVo(ProductVo productVo) {
         return productDao.queryProductByVo(productVo);
     }
+
+    public void updateProductStatus(int id, int productStatus) {
+        Product product = new Product();
+        product.setId(id);
+        product.setProductStatus(productStatus);
+        productDao.updateProductStatus(product);
+    }
 }

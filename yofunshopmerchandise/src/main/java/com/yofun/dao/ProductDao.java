@@ -37,4 +37,8 @@ public class ProductDao {
     public List<Product> queryProductByVo(ProductVo productVo) {
         return productMapper.queryProductByVo(productVo);
     }
+
+    public void updateProductStatus(Product product) {
+        productMapper.updateProductStatus(product);
+    }
 }
