@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yofun.mapper.OrderMapper">
+
+    <insert id="insertOrder" parameterType="com.yofun.model.Order">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into customorder(paymentamout, createat, userid, receivername, receivertelephone, receiveraddress, tradenumber, orderstatus, paymentstatus) value(#{paymentAmout}, #{createAt}, #{userId}, #{receiverName}, #{receiverTelephone}, #{receiverAddress}, #{tradeNumber}, #{orderStatus}, #{paymentStatus})
+    </insert>
+
+</mapper>
