@@ -14,6 +14,7 @@
         <module>yofunshopproducttype</module>
         <module>yofunshopmerchandise</module>
         <module>yofunshopproductdetails</module>
+        <module>yofunshoporder</module>
     </modules>
 
 
