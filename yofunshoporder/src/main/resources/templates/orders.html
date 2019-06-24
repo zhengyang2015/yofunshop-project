@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>PaymentAmout</td>
+        <td>CreateAt</td>
+        <td>UserId</td>
+        <td>PayAt</td>
+        <td>PaymentStatus</td>
+        <td>ReceiverName</td>
+        <td>ReceiverTelephone</td>
+        <td>ReceiverAddress</td>>
+        <td>TradeNumber</td>
+        <td>PaymentType</td>
+        <td>OrderStatus</td>
+        <td>action</td>
+    </tr>
+    <tr th:each = "order : ${orders}">
+        <td th:text="${order.paymentAmout}"></td>
+        <td th:text="${order.createAt}"></td>
+        <td th:text="${order.userId}"></td>
+        <td th:text="${order.payAt}"></td>
+        <td th:text="${order.paymentStatus}"></td>
+        <td th:text="${order.receiverName}"></td>
+        <td th:text="${order.receiverTelephone}"></td>
+        <td th:text="${order.ReceiverAddress}"></td>
+        <td th:text="${order.tradeNumber}"></td>
+        <td th:text="${order.paymentType}"></td>
+        <td th:text="${order.orderStatus}"></td>
+        <td>
+            <a href="#" th:href="@{/findByUserId(id=${order.id})}">LookUp</a>
+            <a href="#" th:href="@{/toUserUpdate(id=${order.id})}">Update</a>
+            <a href="#" th:href="@{/deleteUserById(id=${order.id})}">Delete</a>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>

@@ -12,4 +12,34 @@
         insert into customorder(paymentamout, createat, userid, receivername, receivertelephone, receiveraddress, tradenumber, orderstatus, paymentstatus) value(#{paymentAmout}, #{createAt}, #{userId}, #{receiverName}, #{receiverTelephone}, #{receiverAddress}, #{tradeNumber}, #{orderStatus}, #{paymentStatus})
     </insert>
 
+    <select id="queryOrderByVo" parameterType="com.yofun.vo.OrderVo" resultType="com.yofun.model.Order">
+        select * from customorder
+        <where>
+            <include refid="consutoql"></include>
+        </where>
+    </select>
+
+    <sql id="consutoql">
+        <if test="customOrder != null">
+            <if test="customOrder.paymentAmout != null and customOrder.paymentAmout != ''">
+                and paymentAmout = "${customOrder.paymentAmout}"
+            </if>
+            <if test="customOrder.userId != null and customOrder.userId != ''">
+                and userId = "${customOrder.userId}"
+            </if>
+            <if test="customOrder.createAt != null and customOrder.createAt != ''">
+                and createAt = "${customOrder.createAt}"
+            </if>
+            <if test="customOrder.paymentStatus != null and customOrder.paymentStatus != ''">
+                and paymentStatus = "${customOrder.paymentStatus}"
+            </if>
+            <if test="customOrder.paymentType != null and customOrder.paymentType != ''">
+                and paymentType = "${customOrder.paymentType}"
+            </if>
+            <if test="customOrder.orderStatus != null and customOrder.orderStatus != ''">
+                and orderStatus = "${customOrder.orderStatus}"
+            </if>
+        </if>
+    </sql>
+
 </mapper>
