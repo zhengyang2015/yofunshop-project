@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="yofunshopuser" />
+        <module name="yofunshopproductdetails" />
         <module name="yofunshopproducttype" />
         <module name="yofunshopmerchandise" />
         <module name="yofunshopmerchant" />
         <module name="yofunshoporder" />
-        <module name="yofunshopproductdetails" />
+        <module name="yofunshopuser" />
       </profile>
     </annotationProcessing>
   </component>

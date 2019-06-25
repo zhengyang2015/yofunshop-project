@@ -30,4 +30,17 @@ public class OrderService {
     public List<Order> queryOrderByVo(OrderVo orderVo) {
         return orderDao.queryOrderByVo(orderVo);
     }
+
+    public void updateOrderByUser(int id, String receiverName, String receiverTelephone, String receiverAddress) {
+        Order order = new Order();
+        order.setId(id);
+        order.setReceiverName(receiverName);
+        order.setReceiverTelephone(receiverTelephone);
+        order.setReceiverAddress(receiverAddress);
+        orderDao.updateOrderByUser(order);
+    }
+
+    public Order findOrderById(int id) {
+        return orderDao.findOrderById(id);
+    }
 }

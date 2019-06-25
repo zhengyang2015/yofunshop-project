@@ -42,4 +42,12 @@
         </if>
     </sql>
 
+    <update id="updateOrderByUser" parameterType="com.yofun.model.Order">
+        update customorder set receivername = #{receiverName}, receivertelephone = #{receiverTelephone}, receiveraddress = #{receiverAddress} where id=#{id}
+    </update>
+
+    <select id="findOrderById" parameterType="int" resultType="com.yofun.model.Order">
+        select * from customorder where id=#{value};
+    </select>
+
 </mapper>

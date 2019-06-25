@@ -21,4 +21,12 @@ public class OrderDao {
     public List<Order> queryOrderByVo(OrderVo orderVo) {
         return orderMapper.queryOrderByVo(orderVo);
     }
+
+    public void updateOrderByUser(Order order) {
+        orderMapper.updateOrderByUser(order);
+    }
+
+    public Order findOrderById(int id) {
+        return orderMapper.findOrderById(id);
+    }
 }

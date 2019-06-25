@@ -34,4 +34,31 @@ public class OrderController {
         model.addAttribute("orders", orders);
         return "orders";
     }
+
+    @RequestMapping(value = "/toUpdateOrderByUser", method = RequestMethod.GET)
+    public String toUpdateOrderByUser(int id, Model model) {
+        Order order = orderService.findOrderById(id);
+        if(order == null) {
+            throw new RuntimeException("No order found by id : " + id);
+        }
+
+        model.addAttribute("order", order);
+        return "orderupdate";
+    }
+
+    @RequestMapping(value = "/updateOrderByUser", method = RequestMethod.POST)
+    public void updateOrderByUser(int id, String receiverName, String receiverTelephone, String receiverAddress) {
+        orderService.updateOrderByUser(id, receiverName, receiverTelephone, receiverAddress);
+    }
+
+    @RequestMapping(value = "/findOrderById", method = RequestMethod.GET)
+    public String findOrderById(int id, Model model) {
+        Order order = orderService.findOrderById(id);
+        if(order == null) {
+            throw new RuntimeException("No order found by id : " + id);
+        }
+
+        model.addAttribute("order", order);
+        return "orderview";
+    }
 }

@@ -33,8 +33,8 @@
         <td th:text="${order.paymentType}"></td>
         <td th:text="${order.orderStatus}"></td>
         <td>
-            <a href="#" th:href="@{/findByUserId(id=${order.id})}">LookUp</a>
-            <a href="#" th:href="@{/toUserUpdate(id=${order.id})}">Update</a>
+            <a href="#" th:href="@{/findOrderById(id=${order.id})}">LookUp</a>
+            <a href="#" th:href="@{/toUpdateOrderByUser(id=${order.id})}">Update</a>
             <a href="#" th:href="@{/deleteUserById(id=${order.id})}">Delete</a>
         </td>
 
