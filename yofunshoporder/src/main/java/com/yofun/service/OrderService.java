@@ -43,4 +43,8 @@ public class OrderService {
     public Order findOrderById(int id) {
         return orderDao.findOrderById(id);
     }
+
+    public void deleteOrderById(int id) {
+        orderDao.deleteOrderById(id);
+    }
 }

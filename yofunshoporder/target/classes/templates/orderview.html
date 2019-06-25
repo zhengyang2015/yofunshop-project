@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form >
+    PaymentAmout：<span th:text="${order.paymentAmout}"/><br/>
+    CreateAt：<span th:text="${order.createAt}"/><br/>
+    UserId：<span th:text="${order.userId}"/><br/>
+    PayAt：<span th:text="${order.payAt}"/><br/>
+    PaymentStatus：<span th:text="${order.paymentStatus}"/><br/>
+    ReceiverName:<span th:text="${order.receiverName}"/><br/>
+    ReceiverTelephone:<span th:text="${order.receiverTelephone}"/><br/>
+    ReceiverAddress：<span th:text="${order.receiverAddress}"/><br/>
+    TradeNumber：<span th:text="${order.tradeNumber}"/><br/>
+    PaymentType：<span th:text="${order.paymentType}"/><br/>
+    OrderStatus：<span th:text="${order.orderStatus}"/><br/>
+</form>
+</body>
+</html>

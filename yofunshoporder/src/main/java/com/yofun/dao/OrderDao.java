@@ -29,4 +29,8 @@ public class OrderDao {
     public Order findOrderById(int id) {
         return orderMapper.findOrderById(id);
     }
+
+    public void deleteOrderById(int id) {
+        orderMapper.deleteOrderById(id);
+    }
 }

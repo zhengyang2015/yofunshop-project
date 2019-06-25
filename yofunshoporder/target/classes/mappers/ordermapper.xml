@@ -50,4 +50,8 @@
         select * from customorder where id=#{value};
     </select>
 
+    <delete id="deleteOrderById" parameterType="int">
+        delete from customorder where id=#{value}
+    </delete>
+
 </mapper>

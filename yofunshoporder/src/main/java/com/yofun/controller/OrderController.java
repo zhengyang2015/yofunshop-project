@@ -43,11 +43,27 @@ public class OrderController {
         }
 
         model.addAttribute("order", order);
-        return "orderupdate";
+        return "orderupdatebyuser";
     }
 
     @RequestMapping(value = "/updateOrderByUser", method = RequestMethod.POST)
     public void updateOrderByUser(int id, String receiverName, String receiverTelephone, String receiverAddress) {
+        orderService.updateOrderByUser(id, receiverName, receiverTelephone, receiverAddress);
+    }
+
+    @RequestMapping(value = "/toUpdateOrderByMerchant", method = RequestMethod.GET)
+    public String toUpdateOrderByMerchant(int id, Model model) {
+        Order order = orderService.findOrderById(id);
+        if(order == null) {
+            throw new RuntimeException("No order found by id : " + id);
+        }
+
+        model.addAttribute("order", order);
+        return "orderupdatebymerchant";
+    }
+
+    @RequestMapping(value = "/updateOrderByMerchant", method = RequestMethod.POST)
+    public void updateOrderByMerchant(int id, String receiverName, String receiverTelephone, String receiverAddress) {
         orderService.updateOrderByUser(id, receiverName, receiverTelephone, receiverAddress);
     }
 
@@ -60,5 +76,10 @@ public class OrderController {
 
         model.addAttribute("order", order);
         return "orderview";
+    }
+
+    @RequestMapping(value = "/deleteOrderById", method = RequestMethod.GET)
+    public void deleteOrderById(int id) {
+        orderService.deleteOrderById(id);
     }
 }

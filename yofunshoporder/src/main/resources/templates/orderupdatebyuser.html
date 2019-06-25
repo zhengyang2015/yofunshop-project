@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="updateOrderByUser" method="post">
+    <input type="hidden" name="id" th:value="${order.id}">
+    PaymentAmout：<span th:text="${order.paymentAmout}"/><br/>
+    UserId：<span th:text="${order.userId}"/><br/>
+    ReceiverName：<input name="receiverName" th:value="${order.receiverName}"/><br/>
+    ReceiverTelephone：<input name="receiverTelephone" th:value="${order.receiverTelephone}"/><br/>
+    ReceiverAddress：<input name="receiverAddress" th:value="${order.receiverAddress}"/><br/>
+    <input type="submit" value="Submit"/><br/>
+</form>
+</body>
+</html>

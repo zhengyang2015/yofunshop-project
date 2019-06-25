@@ -10,4 +10,5 @@ public interface OrderMapper {
     List<Order> queryOrderByVo(OrderVo orderVo);
     void updateOrderByUser(Order order);
     Order findOrderById(int id);
+    void deleteOrderById(int id);
 }
