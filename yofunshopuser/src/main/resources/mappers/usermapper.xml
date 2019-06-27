@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE com.yofun.mapper
+<!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-com.yofun.mapper.dtd">
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<com.yofun.mapper namespace="com.yofun.mapper.UserMapper">
+<mapper namespace="com.yofun.mapper.UserMapper">
 
     <select id="findUserInfo" resultType="com.yofun.model.User">
         select name, age, datebirth, address, telephone, qq, wechat, email, sex from user;
@@ -71,4 +71,4 @@
         delete from user where id=#{value}
     </delete>
 
-</com.yofun.mapper>
+</mapper>

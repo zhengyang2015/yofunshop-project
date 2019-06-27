@@ -1,7 +1,0 @@
-com/yofun/dao/ProductDetailsDao.class
-com/yofun/mapper/ProductDetailsMapper.class
-com/yofun/model/ProductDetails.class
-com/yofun/service/ProductDetailsService.class
-com/yofun/controller/ProductDetailsController.class
-com/yofun/model/ProductDetails$ProductDetailsBuilder.class
-com/yofun/Application.class

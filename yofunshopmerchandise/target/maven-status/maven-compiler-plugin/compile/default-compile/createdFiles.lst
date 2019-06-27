@@ -4,6 +4,8 @@ com/yofun/mapper/ProductMapper.class
 com/yofun/Application.class
 com/yofun/model/Product$ProductBuilder.class
 com/yofun/controller/ProductController.class
+com/yofun/model/ProductDetails.class
 com/yofun/vo/ProductVo.class
 com/yofun/dao/ProductDao.class
+com/yofun/model/ProductDetails$ProductDetailsBuilder.class
 com/yofun/service/ProductService.class
