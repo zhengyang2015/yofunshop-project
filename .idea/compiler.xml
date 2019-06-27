@@ -11,6 +11,8 @@
         <module name="yofunshopmerchandise" />
         <module name="yofunshopmerchant" />
         <module name="yofunshoporder" />
+        <module name="yofunshopproductdisplay" />
+        <module name="yofunshoppaymentservice" />
         <module name="yofunshopuser" />
       </profile>
     </annotationProcessing>
