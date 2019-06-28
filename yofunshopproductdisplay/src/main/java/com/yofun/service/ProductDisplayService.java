@@ -1,20 +1,15 @@
 package com.yofun.service;
 
-import com.yofun.dao.ProductDisplayDao;
-import com.yofun.model.Product;
-import com.yofun.vo.ProductVo;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.List;
-
+@FeignClient(value = "yofunshopproducttype")
 @Service
-public class ProductDisplayService {
+public interface ProductDisplayService {
 
-    @Autowired
-    private ProductDisplayDao productDisplayDao;
-
-    public List<Product> queryProductByVo(ProductVo productVo) {
-        return productDisplayDao.queryProductByVo(productVo);
-    }
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    String sayHiFromClient(@RequestParam(value = "name") String name);
 }

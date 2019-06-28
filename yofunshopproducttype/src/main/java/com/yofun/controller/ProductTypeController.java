@@ -4,18 +4,25 @@ import com.yofun.model.ProductType;
 import com.yofun.service.ProductTypeService;
 import com.yofun.vo.ProductTypeVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+@EnableEurekaClient
 @Controller
 public class ProductTypeController {
 
     @Autowired
     ProductTypeService productTypeService;
+
+
 
 
     @RequestMapping(value = "/insertProducttype", method = RequestMethod.POST)
@@ -70,5 +77,11 @@ public class ProductTypeController {
     @RequestMapping(value = "/deleteProductTypeById", method = RequestMethod.GET)
     public void deleteProductTypeById(int id) {
         productTypeService.deleteProductTypeById(id);
+    }
+
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    @ResponseBody
+    public String testCloud(@RequestParam String name){
+        return "hi " + name + ",i am from port:";
     }
 }

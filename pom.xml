@@ -16,6 +16,7 @@
         <module>yofunshoporder</module>
         <module>yofunshoppaymentservice</module>
         <module>yofunshopproductdisplay</module>
+        <module>yofuncloudservice</module>
     </modules>
 
 
