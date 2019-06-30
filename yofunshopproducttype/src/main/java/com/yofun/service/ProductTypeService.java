@@ -32,4 +32,8 @@ public class ProductTypeService {
     public void deleteProductTypeById(int id) {
         productTypeDao.deleteProductTypeById(id);
     }
+
+    public List<ProductType> findAllProductType() {
+        return productTypeDao.findAllProductType();
+    }
 }

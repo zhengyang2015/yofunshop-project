@@ -9,8 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -73,11 +71,5 @@ public class ProductTypeController {
     @RequestMapping(value = "/deleteProductTypeById", method = RequestMethod.GET)
     public void deleteProductTypeById(int id) {
         productTypeService.deleteProductTypeById(id);
-    }
-
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    @ResponseBody
-    public String testCloud(@RequestParam String name){
-        return "Hi " + name + ", I am from port:";
     }
 }

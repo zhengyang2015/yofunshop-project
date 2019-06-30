@@ -1,9 +1,7 @@
 package com.yofun.controller;
 
-import com.yofun.model.Product;
-import com.yofun.service.ProductService;
-import com.yofun.vo.CustomProduct;
-import com.yofun.vo.ProductVo;
+import com.yofun.model.ProductType;
+import com.yofun.service.ProductTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,23 +13,18 @@ import java.util.List;
 
 @EnableEurekaClient
 @RestController
-public class ProductIntegrateController {
+public class ProductTypeIntegrateController {
 
     @Autowired
-    private ProductService productService;
+    ProductTypeService productTypeService;
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String testCloud(@RequestParam String name){
         return "Hi " + name + ", I am from port:";
     }
 
-    @RequestMapping(value = "/listProduct",method = RequestMethod.GET)
-    public List<Product> listProduct(int productTypeId) {
-        CustomProduct customProduct = new CustomProduct();
-        customProduct.setProductTypeId(productTypeId);
-        ProductVo productVo = new ProductVo();
-        productVo.setCustomProduct(customProduct);
-        List<Product> products = productService.queryProductByVo(productVo);
-        return products;
+    @RequestMapping(value = "/findAllProductType",method = RequestMethod.GET)
+    public List<ProductType> findAllProductType(){
+        return productTypeService.findAllProductType();
     }
 }

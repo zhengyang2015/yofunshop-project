@@ -11,4 +11,5 @@ public interface ProductTypeMapper {
     void updateProductType(ProductType productType);
     List<ProductType> queryProductTypeByVo(ProductTypeVo productTypeVo);
     void deleteProductTypeById(int id);
+    List<ProductType> findAllProductType();
 }

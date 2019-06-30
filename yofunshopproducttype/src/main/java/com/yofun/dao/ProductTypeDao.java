@@ -33,4 +33,8 @@ public class ProductTypeDao {
     public void deleteProductTypeById(int id) {
         productTypeMapper.deleteProductTypeById(id);
     }
+
+    public List<ProductType> findAllProductType() {
+        return productTypeMapper.findAllProductType();
+    }
 }
