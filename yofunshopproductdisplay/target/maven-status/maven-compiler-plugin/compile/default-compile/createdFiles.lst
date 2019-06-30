@@ -1,8 +1,4 @@
-com/yofun/service/ProductDisplayService.class
-com/yofun/model/Product.class
-com/yofun/vo/ProductVo.class
-com/yofun/vo/CustomProduct.class
 com/yofun/controller/ProductDisplayController.class
 com/yofun/Application.class
-com/yofun/service/ProductService.class
-com/yofun/model/Product$ProductBuilder.class
+com/yofun/service/DisplayProductTypeService.class
+com/yofun/service/DisplayProductService.class

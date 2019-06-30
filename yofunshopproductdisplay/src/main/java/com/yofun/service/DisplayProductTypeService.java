@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "yofunshopmerchandise")
+@FeignClient(value = "yofunshopproducttype")
 @Service
-public interface ProductService {
+public interface DisplayProductTypeService {
+
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     String sayHiFromClient(@RequestParam(value = "name") String name);
 }

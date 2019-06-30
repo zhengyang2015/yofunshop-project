@@ -1,7 +1,4 @@
-/Users/stevenzheng/IdeaProjects/yofunshop/yofunshopproductdisplay/src/main/java/com/yofun/service/ProductService.java
-/Users/stevenzheng/IdeaProjects/yofunshop/yofunshopproductdisplay/src/main/java/com/yofun/vo/CustomProduct.java
-/Users/stevenzheng/IdeaProjects/yofunshop/yofunshopproductdisplay/src/main/java/com/yofun/model/Product.java
-/Users/stevenzheng/IdeaProjects/yofunshop/yofunshopproductdisplay/src/main/java/com/yofun/vo/ProductVo.java
+/Users/stevenzheng/IdeaProjects/yofunshop/yofunshopproductdisplay/src/main/java/com/yofun/service/DisplayProductService.java
+/Users/stevenzheng/IdeaProjects/yofunshop/yofunshopproductdisplay/src/main/java/com/yofun/service/DisplayProductTypeService.java
 /Users/stevenzheng/IdeaProjects/yofunshop/yofunshopproductdisplay/src/main/java/com/yofun/Application.java
 /Users/stevenzheng/IdeaProjects/yofunshop/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductDisplayController.java
-/Users/stevenzheng/IdeaProjects/yofunshop/yofunshopproductdisplay/src/main/java/com/yofun/service/ProductDisplayService.java
