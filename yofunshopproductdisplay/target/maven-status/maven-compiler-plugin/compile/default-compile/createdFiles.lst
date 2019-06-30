@@ -2,8 +2,7 @@ com/yofun/service/ProductDisplayService.class
 com/yofun/model/Product.class
 com/yofun/vo/ProductVo.class
 com/yofun/vo/CustomProduct.class
-com/yofun/dao/ProductDisplayDao.class
-com/yofun/mapper/ProductDisplayMapper.class
 com/yofun/controller/ProductDisplayController.class
 com/yofun/Application.class
+com/yofun/service/ProductService.class
 com/yofun/model/Product$ProductBuilder.class

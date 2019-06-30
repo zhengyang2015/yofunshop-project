@@ -22,9 +22,6 @@ public class ProductTypeController {
     @Autowired
     ProductTypeService productTypeService;
 
-
-
-
     @RequestMapping(value = "/insertProducttype", method = RequestMethod.POST)
     public void insertProductType(ProductType productType) {
         productTypeService.insertProductType(productType);
@@ -79,9 +76,9 @@ public class ProductTypeController {
         productTypeService.deleteProductTypeById(id);
     }
 
-    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
     @ResponseBody
     public String testCloud(@RequestParam String name){
-        return "hi " + name + ",i am from port:";
+        return "Hi " + name + ", I am from port:";
     }
 }
