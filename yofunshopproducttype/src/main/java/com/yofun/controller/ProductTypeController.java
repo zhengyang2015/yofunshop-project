@@ -4,7 +4,6 @@ import com.yofun.model.ProductType;
 import com.yofun.service.ProductTypeService;
 import com.yofun.vo.ProductTypeVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
