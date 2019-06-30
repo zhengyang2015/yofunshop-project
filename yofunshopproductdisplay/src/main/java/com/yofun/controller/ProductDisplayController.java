@@ -4,12 +4,13 @@ import com.yofun.model.Product;
 import com.yofun.service.DisplayProductTypeService;
 import com.yofun.service.DisplayProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class ProductDisplayController {
 
     @Autowired

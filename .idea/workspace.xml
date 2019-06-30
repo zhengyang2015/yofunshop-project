@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="138bcfb9-7e27-4aac-b7b1-e319683b5615" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductTypeDisplayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/controller/ProductTypeIntegrateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yofunshopproductdisplay/src/main/resources/templates/producttypes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/ProductDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/ProductDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/ProductType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopmerchandise/src/main/java/com/yofun/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopmerchandise/src/main/java/com/yofun/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopmerchandise/src/main/java/com/yofun/controller/ProductIntegrateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopmerchandise/src/main/java/com/yofun/controller/ProductIntegrateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopmerchandise/target/classes/com/yofun/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopmerchandise/target/classes/com/yofun/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopmerchandise/target/classes/com/yofun/controller/ProductIntegrateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopmerchandise/target/classes/com/yofun/controller/ProductIntegrateController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductDisplayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductDisplayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/service/DisplayProductTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/service/DisplayProductTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopproductdisplay/target/classes/com/yofun/controller/ProductDisplayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproductdisplay/target/classes/com/yofun/controller/ProductDisplayController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/controller/ProductTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/controller/ProductTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/dao/ProductTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/dao/ProductTypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/mapper/ProductTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/mapper/ProductTypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/service/ProductTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/service/ProductTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopproducttype/src/main/resources/mappers/producttypemapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproducttype/src/main/resources/mappers/producttypemapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yofunshopproducttype/target/classes/com/yofun/controller/ProductTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproducttype/target/classes/com/yofun/controller/ProductTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductTypeDisplayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductTypeDisplayController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/yofunshopproducttype/target/" />
@@ -75,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductTypeDisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="418">
+              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,11 +73,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductDisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="36" column="5" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="608">
+              <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yofunshopproductdisplay/src/main/resources/templates/producttypes.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yofunshopproductdisplay/src/main/resources/templates/products.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -109,19 +113,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/ProductDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/ProductType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="228">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -133,19 +128,6 @@
               <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/dao/ProductTypeDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="38" column="5" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-              <folding>
-                <element signature="e#1064#1065#0" expanded="true" />
-                <element signature="e#1096#1097#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -169,9 +151,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -190,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/dao/ProductDao.java" />
         <option value="$PROJECT_DIR$/yofunshopmerchandise/src/main/java/com/yofun/Application.java" />
         <option value="$PROJECT_DIR$/yofunshopmerchant/src/main/java/com/yofun/Application.java" />
@@ -228,7 +209,6 @@
         <option value="$PROJECT_DIR$/yofunshopmerchandise/pom.xml" />
         <option value="$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/Product.java" />
         <option value="$PROJECT_DIR$/yofunshopcommon/pom.xml" />
-        <option value="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductDisplayController.java" />
         <option value="$PROJECT_DIR$/yofunshopmerchandise/src/main/java/com/yofun/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/yofunshopmerchandise/src/main/java/com/yofun/controller/ProductIntegrateController.java" />
         <option value="$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/controller/ProductTypeController.java" />
@@ -241,6 +221,8 @@
         <option value="$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/ProductType.java" />
         <option value="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/service/DisplayProductTypeService.java" />
         <option value="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductTypeDisplayController.java" />
+        <option value="$PROJECT_DIR$/yofunshopproductdisplay/src/main/resources/templates/producttypes.html" />
+        <option value="$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductDisplayController.java" />
       </list>
     </option>
   </component>
@@ -739,7 +721,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32908705" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32908705" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32908705" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39915073" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -760,13 +742,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/yofunshoporder/src/main/resources/mappers/ordermapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yofunshopmerchant/src/main/resources/mappers/merchantmapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -992,13 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yofunshopproductdisplay/src/main/resources/templates/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yofunshopproducttype/src/main/java/com/yofun/controller/ProductTypeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1074,13 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/ProductType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1136,20 +1097,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/yofunshopcommon/src/main/java/com/yofun/model/ProductType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductDisplayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
+        <state relative-caret-position="608">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/yofunshopproductdisplay/src/main/resources/templates/producttypes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yofunshopproductdisplay/src/main/resources/templates/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yofunshopproductdisplay/src/main/java/com/yofun/controller/ProductTypeDisplayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="418">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
