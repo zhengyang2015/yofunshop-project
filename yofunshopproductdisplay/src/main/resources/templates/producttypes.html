@@ -5,13 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<table border="1">
-    <tr>
-        <td>ProductType</td>
-    </tr>
-    <tr th:each = "productType : ${productTypes}">
-        <td th:text="${productType.typeName}"></td>
-    </tr>
-</table>
+<div th:fragment="producttypes">
+    <table border="1">
+        <tr>
+            <td>ProductType</td>
+        </tr>
+        <tr th:each = "productType : ${productTypes}">
+            <td><a href="#" th:href="@{/listProduct(productTypeId=${productType.id})}"><span th:text="${productType.typeName}"></span></a></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

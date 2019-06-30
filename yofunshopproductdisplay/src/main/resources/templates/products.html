@@ -13,7 +13,7 @@
         <td>merchantId</td>
         <td>stockNumber</td>
         <td>productImageUrl</td>
-        <td>action</td>
+<!--        <td>action</td>-->
     </tr>
     <tr th:each = "product : ${products}">
         <td th:text="${product.productTypeId}"></td>
@@ -22,13 +22,13 @@
         <td th:text="${product.merchantId}"></td>
         <td th:text="${product.stockNumber}"></td>
         <td th:text="${product.productImageUrl}"></td>
-        <td>
-            <a href="#" th:href="@{/findProductById(id=${product.id})}">LookUp</a>
-            <a href="#" th:href="@{/toUpdateProduct(id=${product.id})}">Update</a>
-            <a href="#" th:href="@{/deleteProductById(id=${product.id})}">Delete</a>
-            <a href="#" th:href="@{/updateProductStatus(id=${product.id}, productStatus=0)}">Add</a>
-            <a href="#" th:href="@{/updateProductStatus(id=${product.id}, productStatus=1)}">Remove</a>
-        </td>
+<!--        <td>-->
+<!--            <a href="#" th:href="@{/findProductById(id=${product.id})}">LookUp</a>-->
+<!--            <a href="#" th:href="@{/toUpdateProduct(id=${product.id})}">Update</a>-->
+<!--            <a href="#" th:href="@{/deleteProductById(id=${product.id})}">Delete</a>-->
+<!--            <a href="#" th:href="@{/updateProductStatus(id=${product.id}, productStatus=0)}">Add</a>-->
+<!--            <a href="#" th:href="@{/updateProductStatus(id=${product.id}, productStatus=1)}">Remove</a>-->
+<!--        </td>-->
 
     </tr>
 </table>

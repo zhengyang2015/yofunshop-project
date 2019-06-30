@@ -16,5 +16,5 @@ public interface DisplayProductService {
     String sayHiFromClient(@RequestParam(value = "name") String name);
 
     @RequestMapping(value = "/listProduct",method = RequestMethod.GET)
-    List<Product> lisProduct(@RequestParam(value = "productTypeId") int productTypeId);
+    List<Product> findAllProduct(@RequestParam(value = "productTypeId") int productTypeId);
 }
