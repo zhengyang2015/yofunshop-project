@@ -26,8 +26,8 @@
                 <li>
                     <span>ProductService</span>
                     <ul>
-                        <li><span><a href="javascript:void();" onclick="producttypeurl()">ProductTypeList</a></span></li>
-                        <li><span><a href="javascript:void();" onclick="producturl()">ProductList</a></span></li>
+                        <li><span><a href="javascript:void();" onclick="producttypelist()">ProductTypeList</a></span></li>
+                        <li><span><a href="javascript:void();" onclick="productlist()">ProductList</a></span></li>
                     </ul>
                 </li>
             </ul>
@@ -43,12 +43,12 @@ function userlist(){
 	$('#pageurl').attr("src","http://127.0.0.1:8088/listUser");
     $('#pageurl').show();
 }
-function producttypeurl(){
-	$('#pageurl').attr("src","http://127.0.0.1:8088/listproducttype");
+function producttypelist(){
+	$('#pageurl').attr("src","http://127.0.0.1:8088/findAllProductType");
     $('#pageurl').show();
 }
-function producturl(){
-	$('#pageurl').attr("src","http://127.0.0.1:8088/listproducttypebypr");
+function productlist(){
+	$('#pageurl').attr("src","http://127.0.0.1:8088/listProductTypeByProduct");
     $('#pageurl').show();
 }
 function activeuserurl(){
