@@ -1,5 +1,6 @@
 com/yofun/mapper/ProductTypeMapper.class
 com/yofun/Application.class
+com/yofun/controller/ProductTypeIntegrateController.class
 com/yofun/vo/CustomProductType.class
 com/yofun/service/ProductTypeService.class
 com/yofun/dao/ProductTypeDao.class

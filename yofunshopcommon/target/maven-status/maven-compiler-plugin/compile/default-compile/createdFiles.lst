@@ -1,6 +1,8 @@
 com/yofun/model/ProductType.class
 com/yofun/model/ProductType$ProductTypeBuilder.class
-com/yofun/model/ProductDetails$ProductDetailsBuilder.class
 com/yofun/model/ProductDetails.class
 com/yofun/model/Product.class
+com/yofun/model/User$UserBuilder.class
+com/yofun/model/User.class
+com/yofun/model/ProductDetails$ProductDetailsBuilder.class
 com/yofun/model/Product$ProductBuilder.class

@@ -18,6 +18,7 @@
         <module>yofunshopproductdisplay</module>
         <module>yofuncloudservice</module>
         <module>yofunshopcommon</module>
+        <module>yofunadmin</module>
     </modules>
 
 

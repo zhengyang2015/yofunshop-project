@@ -1,9 +1,8 @@
+com/yofun/controller/UserIntegrateController.class
 com/yofun/vo/ConstomUser.class
 com/yofun/vo/UserVo.class
 com/yofun/service/UserService.class
-com/yofun/model/User.class
 com/yofun/Application.class
 com/yofun/mapper/UserMapper.class
 com/yofun/controller/UserController.class
 com/yofun/dao/UserDao.class
-com/yofun/model/User$UserBuilder.class

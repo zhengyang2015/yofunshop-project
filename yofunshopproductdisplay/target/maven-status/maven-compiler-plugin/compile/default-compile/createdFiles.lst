@@ -1,4 +1,6 @@
-com/yofun/controller/ProductDisplayController.class
-com/yofun/Application.class
 com/yofun/service/DisplayProductTypeService.class
+com/yofun/controller/IndexController.class
+com/yofun/controller/ProductDisplayController.class
+com/yofun/controller/ProductTypeDisplayController.class
+com/yofun/Application.class
 com/yofun/service/DisplayProductService.class
