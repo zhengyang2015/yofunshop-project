@@ -27,4 +27,9 @@ public class UserIntegrateController {
     public void userRegister(@RequestBody User user) {
         userService.insertUserInfo(user);
     }
+
+    @RequestMapping(value = "/findUserByName", method = RequestMethod.GET)
+    public User findUserByName(@RequestParam(value = "name") String name) {
+        return userService.findUserByName(name);
+    }
 }

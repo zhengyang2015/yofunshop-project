@@ -12,4 +12,5 @@ public interface UserMapper {
     User findByUserId(int id);
     List<User> queryUserByVo(UserVo userVo);
     void deleteUserById(int id);
+    User findUserByName(String name);
 }

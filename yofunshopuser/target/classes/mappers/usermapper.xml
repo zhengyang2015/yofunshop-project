@@ -71,4 +71,8 @@
         delete from user where id=#{value}
     </delete>
 
+    <select id="findUserByName" parameterType="java.lang.String" resultType="com.yofun.model.User">
+        select * from user where name=#{value}
+    </select>
+
 </mapper>

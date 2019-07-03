@@ -37,4 +37,8 @@ public class UserDao {
     public void deleteUserById(int id) {
         userMapper.deleteUserById(id);
     }
+
+    public User findUserByName(String name) {
+        return userMapper.findUserByName(name);
+    }
 }

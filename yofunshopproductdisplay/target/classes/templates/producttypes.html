@@ -6,7 +6,7 @@
 </head>
 <body>
 <div th:fragment="producttypes">
-    <a href="/toUserRegister">SignOn</a> || <a href="">SignIn</a>
+    <a href="/toUserRegister">SignOn</a> || <a href="/toUserLogin">SignIn</a> Welcome <span th:if="${session.user != null}" th:text="${session.user.name}"></span>
     <table border="1">
         <tr>
             <td>ProductType</td>
