@@ -38,3 +38,4 @@ target/
 
 **/docker/data/
 **/target/
+**/target/classes

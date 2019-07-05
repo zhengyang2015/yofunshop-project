@@ -23,4 +23,6 @@ public interface ProductTypeDisplayService {
     @RequestMapping(value = "/integrateFindProductTypeById", method = RequestMethod.GET)
     ProductType findProductTypeById(@RequestParam(value = "id") int id);
 
+    @RequestMapping(value = "/integrateUpdateProductTypeById", method = RequestMethod.POST)
+    void updateProductTypeById(@RequestBody ProductType productType);
 }

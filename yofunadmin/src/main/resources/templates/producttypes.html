@@ -21,7 +21,7 @@
         <td th:text="${productType.parentId}"></td>
         <td>
             <a href="#" th:href="@{/findProductTypeById(id=${productType.id})}">LookUp</a>
-<!--            <a href="#" th:href="@{/toUpdateProductTypeById(id=${productType.id})}">Update</a>-->
+            <a href="#" th:href="@{/toUpdateProductTypeById(id=${productType.id})}">Update</a>
 <!--            <a href="#" th:href="@{/deleteProductTypeById(id=${productType.id})}">Delete</a>-->
             <a href="#" th:href="@{/toInsertProducttype(parentId=${productType.id}, parentLevel=${productType.typeLevel})}">Insert Sub-ProductType</a>
         </td>

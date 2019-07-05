@@ -50,4 +50,17 @@ public class ProductTypeAction {
         model.addAttribute("productType", productType);
         return "producttypeview";
     }
+
+    @RequestMapping(value = "/updateProductTypeById", method = RequestMethod.POST)
+    public void updateProductTypeById(ProductType productType) {
+        displayProductTypeService.updateProductTypeById(productType);
+    }
+
+    @RequestMapping(value = "/toUpdateProductTypeById", method = RequestMethod.GET)
+    public String toUpdateProductTypeById(int id, Model model) {
+        ProductType productType = displayProductTypeService.findProductTypeById(id);
+        model.addAttribute("productType", productType);
+        return "producttypeupdate";
+    }
+
 }

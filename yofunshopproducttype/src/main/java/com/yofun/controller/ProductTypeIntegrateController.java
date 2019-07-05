@@ -35,4 +35,9 @@ public class ProductTypeIntegrateController {
     public ProductType findProductTypeById(@RequestParam(value = "id") int id) {
         return productTypeService.findProductTypeById(id);
     }
+
+    @RequestMapping(value = "/integrateUpdateProductTypeById", method = RequestMethod.POST)
+    public void updateProductTypeById(@RequestBody ProductType productType) {
+        productTypeService.updateProductType(productType);
+    }
 }
