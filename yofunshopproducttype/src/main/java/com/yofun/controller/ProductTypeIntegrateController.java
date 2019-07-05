@@ -4,10 +4,8 @@ import com.yofun.model.ProductType;
 import com.yofun.service.ProductTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +24,15 @@ public class ProductTypeIntegrateController {
     @RequestMapping(value = "/findAllProductType",method = RequestMethod.GET)
     public List<ProductType> findAllProductType(){
         return productTypeService.findAllProductType();
+    }
+
+    @RequestMapping(value = "/integrateInsertProducttype", method = RequestMethod.POST)
+    public void insertProductType(@RequestBody ProductType productType) {
+        productTypeService.insertProductType(productType);
+    }
+
+    @RequestMapping(value = "/integrateFindProductTypeById", method = RequestMethod.GET)
+    public ProductType findProductTypeById(@RequestParam(value = "id") int id) {
+        return productTypeService.findProductTypeById(id);
     }
 }

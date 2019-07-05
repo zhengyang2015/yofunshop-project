@@ -29,4 +29,25 @@ public class ProductTypeAction {
         model.addAttribute("productTypes", productTypes);
         return "producttypebyproduct";
     }
+
+    @RequestMapping(value = "/insertProducttype",method = RequestMethod.POST)
+    public void insertProducttype(ProductType productType) {
+        displayProductTypeService.insertProductType(productType);
+    }
+
+    @RequestMapping(value = "/toInsertProducttype",method = RequestMethod.GET)
+    public String toInsertProducttype(int parentId, String parentLevel, Model model) {
+        ProductType productType = new ProductType();
+        productType.setParentId(parentId);
+        productType.setTypeLevel(String.valueOf(Integer.valueOf(parentLevel) + 1));
+        model.addAttribute("productType", productType);
+        return "producttypeinsert";
+    }
+
+    @RequestMapping(value = "/findProductTypeById", method = RequestMethod.GET)
+    public String findProductTypeById(int id, Model model) {
+        ProductType productType = displayProductTypeService.findProductTypeById(id);
+        model.addAttribute("productType", productType);
+        return "producttypeview";
+    }
 }
