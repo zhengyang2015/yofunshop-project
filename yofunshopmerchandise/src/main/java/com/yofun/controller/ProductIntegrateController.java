@@ -6,11 +6,10 @@ import com.yofun.vo.CustomProduct;
 import com.yofun.vo.ProductVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @EnableEurekaClient
@@ -33,5 +32,28 @@ public class ProductIntegrateController {
         productVo.setCustomProduct(customProduct);
         List<Product> products = productService.queryProductByVo(productVo);
         return products;
+    }
+
+    @RequestMapping(value = "/integrateInsertProduct", method = RequestMethod.POST)
+    public void insertProduct(@RequestBody Product product) {
+        product.setCreatedAt(LocalDateTime.now());
+        product.setSellNumber(0);
+        product.setProductStatus(0);
+        productService.insertProduct(product);
+    }
+
+    @RequestMapping(value = "/integrateFindProductById", method = RequestMethod.GET)
+    public Product findProductById(@RequestParam(value = "id") int id) {
+        return productService.findProductById(id);
+    }
+
+    @RequestMapping(value = "/integrateUpdateProduct", method = RequestMethod.POST)
+    public void updateProduct(@RequestBody Product product) {
+        productService.updateProduct(product);
+    }
+
+    @RequestMapping(value = "/integrateDeleteProductById", method = RequestMethod.GET)
+    public void deleteProductById(@RequestParam(value = "id") int id) {
+        productService.deleteProductById(id);
     }
 }

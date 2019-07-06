@@ -16,9 +16,7 @@ public class Product {
     private String productTitle;
     private double productPrice;
     private int merchantId;
-//    @ToString.Exclude
     private LocalDateTime createdAt;
-//    @ToString.Exclude
     private LocalDateTime auditAt;
     private int auditStatus;
     private int stockNumber;
