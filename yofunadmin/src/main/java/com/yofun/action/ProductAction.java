@@ -1,11 +1,11 @@
 package com.yofun.action;
 
 import com.yofun.model.Product;
+import com.yofun.model.ProductDetails;
 import com.yofun.service.ProductDisplayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -59,6 +59,17 @@ public class ProductAction {
     @RequestMapping(value = "/deleteProductById", method = RequestMethod.GET)
     public void deleteProductById(int id) {
         productDisplayService.deleteProductById(id);
+    }
+
+    @RequestMapping(value = "/insertProductDetails", method = RequestMethod.POST)
+    public void insertProductDetails(ProductDetails productDetails) {
+        productDisplayService.insertProductDetails(productDetails);
+    }
+
+    @RequestMapping(value = "/toInsertProductDetails", method = RequestMethod.GET)
+    public String toInsertProductDetails(int productId, Model model) {
+        model.addAttribute("productId", productId);
+        return "productdetailsinsert";
     }
 
 }
