@@ -9,7 +9,7 @@
         <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
             SELECT LAST_INSERT_ID()
         </selectKey>
-        insert into productdetails(productId, productPlace, productTitle, productBrand, productWeight, productSpecification, productDetailsImageUrl) value(#{productId}, #{productPlace}, #{productTitle}, #{productBrand}, #{productWeight}, #{productSpecification}, #{productDetailsImageUrl})
+        insert into productdetails(productId, productPlace, productDescription, productBrand, productWeight, productSpecification, productDetailsImageUrl) value(#{productId}, #{productPlace}, #{productDescription}, #{productBrand}, #{productWeight}, #{productSpecification}, #{productDetailsImageUrl})
     </insert>
 
 </mapper>

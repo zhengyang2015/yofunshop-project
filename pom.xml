@@ -19,6 +19,7 @@
         <module>yofuncloudservice</module>
         <module>yofunshopcommon</module>
         <module>yofunadmin</module>
+        <module>solrtest</module>
     </modules>
 
 

@@ -12,7 +12,7 @@ public class ProductDetails {
     private int id;
     private int productId;
     private String productPlace;
-    private String productTitle;
+    private String productDescription;
     private String productBrand;
     private double productWeight;
     private String productSpecification;
