@@ -36,4 +36,11 @@ public class IndexController {
 
         return "list";
     }
+
+    @RequestMapping(value = "/searchProduct",method = RequestMethod.GET)
+    public String searchProduct(Model model, String keyword) {
+        List<Product> products = displayProductService.searchProduct(keyword);
+        model.addAttribute("products", products);
+        return "list";
+    }
 }

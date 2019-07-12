@@ -6,7 +6,9 @@ import com.yofun.vo.ProductVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class ProductDao {
@@ -40,5 +42,11 @@ public class ProductDao {
 
     public void updateProductStatus(Product product) {
         productMapper.updateProductStatus(product);
+    }
+
+    public List<Product> queryProductByIds(List<String> ids) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("ids", ids);
+        return productMapper.queryProductByIds(map);
     }
 }

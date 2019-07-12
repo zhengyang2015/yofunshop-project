@@ -43,15 +43,19 @@ public class SolrUtil {
 
     }
 
-    private static List<String> searchqyinfofromsolr(SolrClient solrClient, String searchname)
+    public static List<String> searchqyinfofromsolr(SolrClient solrClient, String searchName)
             throws SolrServerException, IOException {
+        if(searchName == null) {
+            return new ArrayList<>();
+        }
+
         SolrQuery query = new SolrQuery();
-        query.setQuery("producttitle:" + "*" + searchname + "* OR productdescription:" + "*" + searchname + "*");
+        query.setQuery("producttitle:" + "*" + searchName + "* OR productdescription:" + "*" + searchName + "*");
 
         QueryResponse response = solrClient.query(query);
         SolrDocumentList docs = response.getResults();
         long count = docs.size();
-        List<String> getliststring = new ArrayList<String>();
+        List<String> getliststring = new ArrayList<>();
         //traversal
         for (int i = 0; i < count; i++) {
             SolrDocument sd = docs.get(i);

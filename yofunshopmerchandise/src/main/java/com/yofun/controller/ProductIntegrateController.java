@@ -56,4 +56,9 @@ public class ProductIntegrateController {
     public void deleteProductById(@RequestParam(value = "id") int id) {
         productService.deleteProductById(id);
     }
+
+    @RequestMapping(value = "/integrateSearchProduct", method = RequestMethod.GET)
+    public List<Product> searchProduct(@RequestParam(value = "keyword") String keyword) {
+        return productService.searchProduct(keyword);
+    }
 }

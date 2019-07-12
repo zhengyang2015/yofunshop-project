@@ -17,4 +17,7 @@ public interface DisplayProductService {
 
     @RequestMapping(value = "/listProduct",method = RequestMethod.GET)
     List<Product> findAllProduct(@RequestParam(value = "productTypeId") int productTypeId);
+
+    @RequestMapping(value = "/integrateSearchProduct", method = RequestMethod.GET)
+    List<Product> searchProduct(@RequestParam(value = "keyword") String keyword);
 }

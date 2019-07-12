@@ -4,6 +4,7 @@ import com.yofun.model.Product;
 import com.yofun.vo.ProductVo;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ProductMapper {
     void insertProduct(Product product);
@@ -13,4 +14,5 @@ public interface ProductMapper {
     void deleteProductById(int id);
     List<Product> queryProductByVo(ProductVo productVo);
     void updateProductStatus(Product product);
+    List<Product> queryProductByIds(Map<String, Object> map);
 }

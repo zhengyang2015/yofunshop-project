@@ -56,4 +56,15 @@
         update product set productstatus = #{productStatus} where id=#{id}
     </update>
 
+    <select id="queryProductByIds" resultType="com.yofun.model.Product">
+        select * from product where 1 = 2
+
+        <if test="ids != null and ids.size>0">
+            or id IN
+            <foreach collection="ids" item="iditem" index="index" open="(" close=")" separator=",">
+                #{iditem}
+            </foreach>
+        </if>
+    </select>
+
 </mapper>

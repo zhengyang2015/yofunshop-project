@@ -5,10 +5,13 @@ import com.yofun.model.Product;
 import com.yofun.utils.SolrUtil;
 import com.yofun.vo.ProductVo;
 import org.apache.solr.client.solrj.SolrClient;
+import org.apache.solr.client.solrj.SolrServerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -65,5 +68,19 @@ public class ProductService {
         product.setId(id);
         product.setProductStatus(productStatus);
         productDao.updateProductStatus(product);
+    }
+
+    public List<Product> searchProduct(String keyword) {
+        List<String> ids = new ArrayList<String>();
+
+        try {
+            ids.addAll(SolrUtil.searchqyinfofromsolr(solrClient, keyword));
+        } catch (SolrServerException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return productDao.queryProductByIds(ids);
     }
 }
