@@ -33,5 +33,7 @@ public class ProductDetailsService {
         }
     }
 
-
+    public ProductDetails findByProductId(int productId) {
+        return productDetailsDao.findByProductId(productId);
+    }
 }

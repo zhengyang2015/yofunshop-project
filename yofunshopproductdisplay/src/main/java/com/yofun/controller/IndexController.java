@@ -1,6 +1,7 @@
 package com.yofun.controller;
 
 import com.yofun.model.Product;
+import com.yofun.model.ProductDetails;
 import com.yofun.model.ProductType;
 import com.yofun.service.DisplayProductService;
 import com.yofun.service.DisplayProductTypeService;
@@ -42,5 +43,19 @@ public class IndexController {
         List<Product> products = displayProductService.searchProduct(keyword);
         model.addAttribute("products", products);
         return "list";
+    }
+
+    @RequestMapping(value = "/toProductDetails",method = RequestMethod.GET)
+    public String toProductDetails(int productId, Model model) {
+        List<ProductType> productTypes = displayProductTypeService.findAllProductType();
+        model.addAttribute("productTypes", productTypes);
+
+        Product product = displayProductService.findProductById(productId);
+        model.addAttribute("product", product);
+
+        ProductDetails productDetails = displayProductService.findProductDetailsByProductId(productId);
+        model.addAttribute("productDetails", productDetails);
+
+        return "productdeatils";
     }
 }

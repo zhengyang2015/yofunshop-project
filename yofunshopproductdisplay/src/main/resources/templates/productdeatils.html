@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<div th:include="producttypes :: producttypes" ></div>
+<table border="1">
+    <tr>
+        <td>ProductTypeId</td>
+        <td>ProductTitle</td>
+        <td>ProductPrice</td>
+        <td>MerchantId</td>
+        <td>StockNumber</td>
+        <td>ProductImageUrl</td>
+        <td>ProductPlace</td>
+        <td>ProductDescription</td>
+        <td>ProductBrand</td>
+        <td>ProductWeight</td>
+        <td>ProductSpecification</td>
+        <td>ProductDetailsImageUrl</td>
+        <td>Action</td>
+    </tr>
+    <tr >
+        <td th:text="${product.productTypeId}"></td>
+        <td th:text="${product.productTitle}"></td>
+        <td th:text="${product.productPrice}"></td>
+        <td th:text="${product.merchantId}"></td>
+        <td th:text="${product.stockNumber}"></td>
+        <td th:text="${product.productImageUrl}"></td>
+        <td th:text="${productDetails.productPlace}"></td>
+        <td th:text="${productDetails.productDescription}"></td>
+        <td th:text="${productDetails.productBrand}"></td>
+        <td th:text="${productDetails.productWeight}"></td>
+        <td th:text="${productDetails.productSpecification}"></td>
+        <td th:text="${productDetails.productDetailsImageUrl}"></td>
+        <td><a href="#" th:href="@{/tobuy(productid=${product.id},num=1)}">Buy</a></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -71,7 +71,7 @@ public class ProductService {
     }
 
     public List<Product> searchProduct(String keyword) {
-        List<String> ids = new ArrayList<String>();
+        List<String> ids = new ArrayList<>();
 
         try {
             ids.addAll(SolrUtil.searchqyinfofromsolr(solrClient, keyword));

@@ -8,15 +8,16 @@
 <div th:include="producttypes::producttypes"></div>
 <table border="1">
     <tr>
-        <td>productTypeId</td>
-        <td>productTitle</td>
-        <td>productPrice</td>
-        <td>merchantId</td>
-        <td>stockNumber</td>
-        <td>productImageUrl</td>
+        <td>ProductTypeId</td>
+        <td>ProductTitle</td>
+        <td>ProductPrice</td>
+        <td>MerchantId</td>
+        <td>StockNumber</td>
+        <td>ProductImageUrl</td>
     </tr>
     <tr th:each = "product : ${products}">
         <td th:text="${product.productTypeId}"></td>
+        <td> <a href="#" th:href="@{/toProductDetails(productId=${product.id})}"><span th:text="${product.productTitle}"></span></a></td>
         <td th:text="${product.productTitle}"></td>
         <td th:text="${product.productPrice}"></td>
         <td th:text="${product.merchantId}"></td>

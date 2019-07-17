@@ -45,7 +45,7 @@ public class ProductDao {
     }
 
     public List<Product> queryProductByIds(List<String> ids) {
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<>();
         map.put("ids", ids);
         return productMapper.queryProductByIds(map);
     }

@@ -14,4 +14,8 @@ public class ProductDetailsDao {
     public void insertProductDetails(ProductDetails productDetails) {
         productDetailsMapper.insertProductDetails(productDetails);
     }
+
+    public ProductDetails findByProductId(int productId) {
+        return productDetailsMapper.findByProductId(productId);
+    }
 }
