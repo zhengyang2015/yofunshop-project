@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<div th:include="producttypes :: producttypes" ></div>
+<form action="insertOrder" method="post">
+    <input type="hidden" name="productId" th:value="${product.id}"/>
+    <input type="hidden" name="merchantId" th:value="${product.merchantId}"/>
+    <input type="hidden" name="num" th:value="${num}"/>
+    <input type="hidden" name="paymentAmount" th:value="${amount}"/>
+    ProductTitle：<span th:text="${product.productTitle}"></span><br/>
+    ProductNumber：<span th:text="${num}"></span><br/>
+    PaymentAmount：<span th:text="${amount}"></span><br/>
+    ReceiverName：<input name="receiverName"/><br/>
+    ReceiverTelephone：<input name="receiverTelephone"/><br/>
+    ReceiverAddress：<input name="receiverAddress"/><br/>
+    <input type="submit" value="Submit"/><br/>
+</form>
+</body>
+</html>
