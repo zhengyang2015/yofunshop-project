@@ -11,4 +11,5 @@ public interface OrderMapper {
     void updateOrderByUser(Order order);
     Order findOrderById(int id);
     void deleteOrderById(int id);
+    void updateOrderById(Order order);
 }

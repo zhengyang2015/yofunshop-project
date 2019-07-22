@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @FeignClient(value = "yofunshopproducttype")
-@Service
 public interface DisplayProductTypeService {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)

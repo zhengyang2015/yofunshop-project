@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(value = "yofunshopuser")
-@Service
 public interface DisplayUserService {
 
     @RequestMapping(value = "/userIntegrateRegister",method = RequestMethod.POST)

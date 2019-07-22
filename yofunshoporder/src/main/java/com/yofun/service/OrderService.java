@@ -47,4 +47,13 @@ public class OrderService {
     public void deleteOrderById(int id) {
         orderDao.deleteOrderById(id);
     }
+
+    public void updateOrderById(int id, int paymentType, int paymentStatus) {
+        Order order = new Order();
+        order.setId(id);
+        order.setPaymentType(paymentType);
+        order.setPaymentStatus(paymentStatus);
+        order.setPayAt(LocalDateTime.now());
+        orderDao.updateOrderById(order);
+    }
 }

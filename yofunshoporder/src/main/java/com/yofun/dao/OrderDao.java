@@ -33,4 +33,8 @@ public class OrderDao {
     public void deleteOrderById(int id) {
         orderMapper.deleteOrderById(id);
     }
+
+    public void updateOrderById(Order order) {
+        orderMapper.updateOrderById(order);
+    }
 }

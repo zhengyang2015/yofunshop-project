@@ -7,10 +7,7 @@ import com.yofun.service.OrderService;
 import com.yofun.vo.OrderAll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @EnableEurekaClient
 @RestController
@@ -31,5 +28,15 @@ public class OrderIntegrateController {
         orderDetails.setOrderId(order.getId());
         orderDetails.setCreateAt(order.getCreateAt());
         orderDetailsService.insertOrderDetails(orderDetails);
+    }
+
+    @RequestMapping(value = "/integrateFindOrderById", method = RequestMethod.GET)
+    public Order findOrderById(@RequestParam(value = "id") int id) {
+        return orderService.findOrderById(id);
+    }
+
+    @RequestMapping(value = "/integrateUpdateOrderById", method = RequestMethod.POST)
+    public void updateOrderById(@RequestParam(value = "id") int id, @RequestParam(value = "paymentType") int paymentType, @RequestParam(value = "paymentStatus") int paymentStatus) {
+        orderService.updateOrderById(id, paymentType, paymentStatus);
     }
 }

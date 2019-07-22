@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @FeignClient(value = "yofunshopmerchandise")
-@Service
 public interface DisplayProductService {
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     String sayHiFromClient(@RequestParam(value = "name") String name);

@@ -54,4 +54,8 @@
         delete from customorder where id=#{value}
     </delete>
 
+    <update id="updateOrderById" parameterType="com.yofun.model.Order">
+        update customorder set paymenttype = #{paymentType}, paymentstatus = #{paymentStatus}, payat = #{payAt} where id=#{id}
+    </update>
+
 </mapper>

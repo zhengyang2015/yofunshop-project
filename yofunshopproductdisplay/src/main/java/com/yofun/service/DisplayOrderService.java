@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient(value = "yofunshoporder")
-@Service
 public interface DisplayOrderService {
 
     @RequestMapping(value = "/integrateInsertOrder", method = RequestMethod.POST)
