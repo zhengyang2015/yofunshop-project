@@ -44,11 +44,14 @@ public class PaymentController {
     public int payWithAmount(String payType, String tradeNumber, double amount) {
 
         int paymentStatus = 2;
-        if ("wechat".equals(payType)) {
+        if ("1".equals(payType)) {
+            //wechatpay
             paymentStatus = wechatPayService.payWithAmount(tradeNumber, amount);
-        } else if ("ali".equals(payType)) {
+        } else if ("2".equals(payType)) {
+            //alipay
             paymentStatus = aliPayService.payWithAmount(tradeNumber, amount);
-        } else if ("creditcard".equals(payType)) {
+        } else if ("3".equals(payType)) {
+            //creditcard
             paymentStatus = creditCardPayService.payWithAmount(tradeNumber, amount);
         }
 

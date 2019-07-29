@@ -19,7 +19,7 @@ public class OrderIntegrateController {
     private OrderDetailsService orderDetailsService;
 
     @RequestMapping(value = "/integrateInsertOrder", method = RequestMethod.POST)
-    public void insertOrder(@RequestBody OrderAll orderAll) {
+    public Integer insertOrder(@RequestBody OrderAll orderAll) {
         Order order = orderAll.getOrder();
         orderService.insertOrder(order);
 
@@ -28,6 +28,7 @@ public class OrderIntegrateController {
         orderDetails.setOrderId(order.getId());
         orderDetails.setCreateAt(order.getCreateAt());
         orderDetailsService.insertOrderDetails(orderDetails);
+        return order.getId();
     }
 
     @RequestMapping(value = "/integrateFindOrderById", method = RequestMethod.GET)

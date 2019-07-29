@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -124,7 +125,25 @@ public class IndexController {
             orderAll.setOrder(order);
             orderAll.setOrderDetails(orderDetails);
 
-            displayOrderService.insertOrder(orderAll);
+            int orderId = displayOrderService.insertOrder(orderAll);
+            model.addAttribute("orderId", orderId);
+
+            return "payorder";
+        }
+    }
+
+    @RequestMapping(value = "/payOrder",method = RequestMethod.POST)
+    public String payOrder(Model model, HttpServletRequest request, int orderId, int payType) {
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("user");
+        if(user == null) {
+            return "login";
+        } else {
+            if("1".equals(payType)) {
+                String url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb4e82a4010455147&redirect_uri=http://beedb79e.ngrok.io/auth?orderId=" + orderId + "&response_type=code&scope=snsapi_base#wechat_redirect";
+                RestTemplate restTemplate = new RestTemplate();
+                String response = restTemplate.getForObject(url, String.class);
+            }
 
             return "list";
         }

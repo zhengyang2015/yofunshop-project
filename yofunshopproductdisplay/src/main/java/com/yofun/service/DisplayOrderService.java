@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface DisplayOrderService {
 
     @RequestMapping(value = "/integrateInsertOrder", method = RequestMethod.POST)
-    void insertOrder(@RequestBody OrderAll orderAll);
+    Integer insertOrder(@RequestBody OrderAll orderAll);
 }

@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="payOrder" method="post">
+    <input type="hidden" name="orderId" th:value="${orderId}"/>
+    PayType: <br/>
+    WeChatPay: <input type="radio" name="payType" value="1" checked="true"/><br/>
+    AliPay: <input type="radio" name="payType" value="2"/><br/>
+    CreditCard: <input type="radio" name="payType" value="3"/><br/>
+    <input type="submit" value="Pay"/><br/>
+</form>
+</body>
+</html>
